@@ -20,16 +20,18 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-8 col-sm-6">
-						<a class="logo" href="#">
-						<?php echo get_bloginfo('name');?>
+						<a class="logo" href="<?php the_permalink(); ?>">
+						
+						<?php
+						// getting name of title
+						echo get_bloginfo('name');?>
 						</a>
 					</div>
 					<div class="col-sm-6 hidden-xs">
 						<form id="searchform" class="searchform">
 							<div>
 								<label class="screen-reader-text">Sök efter:</label>
-								<input type="text" />
-								<input type="submit" value="Sök" />
+								<?php get_search_form(); ?>
 							</div>
 						</form>
 					</div>
@@ -65,6 +67,7 @@
 							'items_wrap' => '<ul id="" class="menu">%3$s</ul>'
 						)
 						);
+						// nav menu set
 						?>
 
 
