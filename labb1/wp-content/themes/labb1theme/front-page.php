@@ -18,7 +18,7 @@ get_header()
             echo wp_get_attachment_image( $attachment->ID, 'full' );
           }
         }
-?>
+       ?>
 
 								<div class="text">
 									<h1>Hej och välkommen!</h1>
