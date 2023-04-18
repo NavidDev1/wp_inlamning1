@@ -6,7 +6,7 @@ get_header();
 			<section>
 				<div class="container">
 					<div class="row">
-						<div id="primary" class="col-xs-12 col-md-9">
+						<div id="primary" class="col-xs-12 col-md-9 col-md-push-3">
 
 							<h1><?php the_title();?></h1>
 							
@@ -25,21 +25,27 @@ get_header();
 
 						</div>
 
-						<aside id="secondary" class="col-xs-12 col-md-3">
+						<aside id="secondary" class="col-xs-12 col-md-3 col-md-pull-9">
 							<ul class="side-menu">
-								<li>
-									<a href="<?php the_permalink(); ?>">Undersida</a>
-								</li>
-								<li>
-									<a href="<?php the_permalink(); ?>">Undersida 2</a>
-								</li>
-								<li>
-									<a href="<?php the_permalink(); ?>">Undersida 3</a>
-								</li>
-								<li>
-									<a href="<?php the_permalink(); ?>">Undersida 4</a>
-                  
-								</li>
+							<?php
+
+wp_nav_menu(
+
+ array(
+
+ 'menu' => 'side undersida menu',
+
+ 'container' => '',
+
+ 'theme_location' => 'side',
+
+'items_wrap' => '<ul id="" class="side-menu">%3$s</ul>'
+
+)
+
+ )
+
+  ?>
 							</ul>
 						</aside>
 					</div>

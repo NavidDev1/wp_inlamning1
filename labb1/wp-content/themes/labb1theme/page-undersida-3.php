@@ -20,23 +20,7 @@ get_header();
              ?>
 
 						</div>
-						<aside id="secondary" class="col-xs-12 col-md-3">
-							<ul class="side-menu">
-								<li>
-									<a href="<?php the_permalink(); ?>">Undersida</a>
-								</li>
-								<li>
-									<a href="<?php the_permalink(); ?>">Undersida 2</a>
-								</li>
-								<li>
-									<a href="<?php the_permalink(); ?>">Undersida 3</a>
-								</li>
-								<li>
-									<a href="<?php the_permalink(); ?>">Undersida 4</a>
-                  
-								</li>
-							</ul>
-						</aside>
+					
 					</div>
 				</div>
 			</section>

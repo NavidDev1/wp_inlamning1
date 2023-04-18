@@ -6,38 +6,25 @@ get_header();
 			<section>
 				<div class="container">
 					<div class="row">
-						<div id="primary" class="col-xs-12 col-md-9">
-              
-            <h1><?php the_title();?></h1>
-              <?php
-              
-              if (have_posts()):
-               while (have_posts()) : the_post();
-                the_content();
-              endwhile;
-             else:
-             echo '<p>Sorry, no posts matched your criteria.</p>';
-              endif;
+						<div class="col-xs-12 col-sm-8 col-md-6">
+						<h1><?php the_title();?></h1>
+						<?php
 
-              ?>
+             the_content();
+             ?>
+
 						</div>
-						<aside id="secondary" class="col-xs-12 col-md-3">
-							<ul class="side-menu">
-								<li>
-									<a href="<?php the_permalink(); ?>">Undersida</a>
-								</li>
-								<li>
-									<a href="<?php the_permalink(); ?>">Undersida 2</a>
-								</li>
-								<li>
-									<a href="<?php the_permalink(); ?>">Undersida 3</a>
-								</li>
-								<li>
-									<a href="<?php the_permalink(); ?>">Undersida 4</a>
-                  
-								</li>
-							</ul>
-						</aside>
+						<div class="col-xs-12 col-sm-4 col-md-6">
+						<?php
+//fetching the content
+            $attachments = get_attached_media( 'image' );
+            if ( $attachments ) {
+            foreach ( $attachments as $attachment ) {
+            echo wp_get_attachment_image( $attachment->ID, 'full' );
+          }
+        }
+				?>
+						</div>
 					</div>
 				</div>
 			</section>
